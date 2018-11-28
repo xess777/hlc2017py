@@ -88,3 +88,5 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+DATA_FILE = os.getenv('DATA_FILE', 'data.zip')
