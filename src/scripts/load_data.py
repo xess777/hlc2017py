@@ -1,3 +1,10 @@
+"""Скрипт загрузки данных в БД из zip архива.
+
+Пример запуска скрипта:
+$ python manage.py runscript load_data
+
+"""
+
 import json
 import logging
 import os
