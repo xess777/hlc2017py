@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'apps.core',
     'apps.users',
     'apps.locations',
     'apps.visits',
@@ -36,6 +37,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'urls'
+
+APPEND_SLASH = False
 
 TEMPLATES = [
     {
@@ -96,7 +99,9 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework.parsers.JSONParser',
-    )
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 DATA_FILE = os.getenv('DATA_FILE', 'data.zip')

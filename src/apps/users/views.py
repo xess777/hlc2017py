@@ -1,10 +1,10 @@
-from rest_framework import viewsets
+from apps.core.viewsets import AppModelViewSet
 
 from .models import User
 from .serializers import UserSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(AppModelViewSet):
     """API endpoint users.
     """
     queryset = User.objects.all()

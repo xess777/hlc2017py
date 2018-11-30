@@ -1,9 +1,10 @@
-from rest_framework import serializers
+from apps.core.serializers import AppModelSerializer
 
 from .models import User
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(AppModelSerializer):
+
     class Meta:
         model = User
         fields = (
