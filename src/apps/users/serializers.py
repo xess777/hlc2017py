@@ -1,9 +1,9 @@
-from apps.core.serializers import AppModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from .models import User
 
 
-class UserSerializer(AppModelSerializer):
+class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User

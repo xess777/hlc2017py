@@ -121,4 +121,3 @@ class UpdateSingleUserTest(APITestCase):
             data=json.dumps(self.invalid_payload),
             content_type=self.content_type)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-

@@ -21,6 +21,8 @@ class AppModelViewSet(
 
     def create(self, request: 'Request', *args, **kwargs) -> 'Response':
         serializer = self.get_serializer(data=request.data)
+        # При создании записи id передается явно.
+        serializer.fields['id'].read_only = False
         serializer.is_valid(raise_exception=True)
         status_code, headers = self.perform_create(serializer)
 
