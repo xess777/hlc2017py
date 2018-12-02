@@ -1,7 +1,5 @@
-from apps.core.routers import AppRouter
-from apps.users.views import UserViewSet
+from django.urls import include, path
 
-router = AppRouter()
-router.register(r'users', UserViewSet)
-
-urlpatterns = router.urls
+urlpatterns = [
+    path('', include('apps.users.urls')),
+]
