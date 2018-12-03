@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from apps.core.viewsets import AppModelViewSet
 
-# Create your views here.
+from .models import Location
+from .serializers import LocationSerializer
+
+
+class LocationViewSet(AppModelViewSet):
+    """API endpoint locations.
+    """
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
